@@ -1,1 +1,1 @@
-# Week 02, Day 2
+# Week 02, Day 2: Overview

@@ -1,5 +1,6 @@
 #!/usr/bin/env bash
 
+rm -rf phase_*
 cp toolkit/build_track.py .
 python3 build_track.py
 rm build_track.py

@@ -1,1 +1,1 @@
-# Week 06, Day 2
+# Week 06, Day 2: Overview

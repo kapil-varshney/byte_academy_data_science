@@ -1,1 +1,1 @@
-# Week 08, Day 3
+# Week 08, Day 3: Overview
