@@ -1,1 +1,1 @@
-# Week 01
+# Week 01: Itinerary

@@ -1,1 +1,1 @@
-# Week 06
+# Week 06: Itinerary

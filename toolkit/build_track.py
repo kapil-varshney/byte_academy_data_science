@@ -17,7 +17,7 @@ for week in range(default_weeks_in_track):
     if week < 10:
 
         os.system('mkdir week_0{0}'.format(week))
-        os.system('echo "# Week 0{0}" >> week_0{0}/README.md'.format(week))
+        os.system('echo "# Week 0{0}: Itinerary" >> week_0{0}/README.md'.format(week))
 
         for day in range(default_days_in_week):
             day += 1
@@ -60,8 +60,7 @@ for week in range(default_weeks_in_track):
 
     else:
         os.system('mkdir week_{0}'.format(week))
-        # os.system('mkdir week_{0}/debates'.format(week))
-        os.system('echo "# Week {0}" >> week_{0}/README.md'.format(week))
+        os.system('echo "# Week {0}: Itinerary" >> week_{0}/README.md'.format(week))
 
         for day in range(default_days_in_week):
             day += 1
