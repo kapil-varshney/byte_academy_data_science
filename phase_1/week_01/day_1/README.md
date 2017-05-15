@@ -1,38 +1,34 @@
-# Week 1, Day 1: Why are we here?
-
-## Monday, May 22, 2017
-
----
+# Week 1, Day 1: Monday, May 22, 2017
 
 *What is a data engineer?*
 
 ---
 
-### Google Data Engineer Certification Exam Guide
+## Google Data Engineer Certification Exam Guide
 
-#### Sample Case Study: Flowlogistic
+### Sample Case Study: Flowlogistic
 
 This is a sample case study that may be used on the Google Data Engineer Certification exam. It describes a fictitious business and solution concept to provide additional context to exam questions.
 
 
-##### Flowlogistic Case Study
+#### Flowlogistic Case Study
 
-###### Company Overview
+##### Company Overview
 
 Flowlogistic is a leading logistics and supply chain provider. They help businesses throughout the world manage their resources and transport them to their final destination. The company has grown rapidly, expanding their offerings to include rail, truck, aircraft, and oceanic shipping.
 
-###### Company Background
+##### Company Background
 
 The company started as a regional trucking company, and then expanded into other logistics markets. Because they have not updated their infrastructure, managing and tracking orders and shipments has become a bottleneck. To improve operations, Flowlogistic developed proprietary technology for tracking shipments in real time at the parcel level. However, they are unable to deploy it because their technology stack, based on Apache Kafka, cannot support the processing volume. In addition, Flowlogistic wants to further analyze their orders and shipments to determine how best to deploy their resources.
 
-###### Solution Concept
+##### Solution Concept
 
 Flowlogistic wants to implement two concepts using the cloud:
 
     - Use their proprietary technology in a real-time inventory-tracking system that indicates the location of their loads.
     - Perform analytics on all their orders and shipment logs, which contain both structured and unstructured data, to determine how best to deploy resources, which customers to target, and which markets to expand into. They also want to use predictive analytics to learn earlier when a shipment will be delayed.
 
-###### Existing Technical Environment
+##### Existing Technical Environment
 
 Flowlogistic architecture resides in a single data center:
 
@@ -57,7 +53,7 @@ Flowlogistic architecture resides in a single data center:
     **20 miscellaneous servers**
         - Jenkins, monitoring, bastion hosts, security scanners, billing software
 
-###### Business Requirements
+##### Business Requirements
 
     - Build a reliable and reproducible environment with scaled parity of production.
     - Aggregate data in a centralized Data Lake for analysis.
@@ -67,7 +63,7 @@ Flowlogistic architecture resides in a single data center:
     - Analyze and optimize architecture for performance in the cloud.
     - Migrate fully to the cloud if all other requirements are met.
 
-###### Technical Requirements
+##### Technical Requirements
 
     - Handle both streaming and batch data.
     - Migrate existing Hadoop workloads.
@@ -76,15 +72,15 @@ Flowlogistic architecture resides in a single data center:
     - Encrypt data in flight and at rest.
     - Connect a VPN between the production data center and cloud environment.
 
-###### CEO Statement
+##### CEO Statement
 
 We have grown so quickly that our inability to upgrade our infrastructure is really hampering further growth and efficiency. We are efficient at moving shipments around the world, but we are inefficient at moving data around. We need to organize our information so we can more easily understand where our customers are and what they are shipping.
 
-###### CTO Statement
+##### CTO Statement
 
 IT has never been a priority for us, so as our data has grown, we have not invested enough in our technology. I have a good staff to manage IT, but they are so busy managing our infrastructure that I cannot get them to do the things that really matter, such as organizing our data, building the analytics, and figuring out how to implement the CFO’s tracking technology.
 
-###### CFO Statement
+##### CFO Statement
 
 Part of our competitive advantage is that we penalize ourselves for late shipments and deliveries. Knowing where our shipments are at all times has a direct correlation to our bottom line and profitability. Additionally, I don’t want to commit capital to building out a server environment. 
 
