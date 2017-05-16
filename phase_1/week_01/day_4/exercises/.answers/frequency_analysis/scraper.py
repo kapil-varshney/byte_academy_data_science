@@ -29,7 +29,7 @@ def seek():
     if request.method == "POST":
         try:
             url = request.form["url"]
-            if "http://" not in url[:7]:
+            if 'http' not in url[:4]:
                 url = "http://" + url
             response = requests.get(url)
         except:
@@ -42,17 +42,17 @@ def seek():
             )
         if response:
             nltk.data.path.append("./nltk_data/")
-            sans_punctuation = re.compile(".*[A-Za-z].*")
-            structured_text = BeautifulSoup(response.text, "html.parser").get_text()
-            unstructured_text = nltk.word_tokenize(structured_text)
-            restructured_text = nltk.Text(unstructured_text)
-            words = [word for word in restructured_text if sans_punctuation.match(word)]
-            words_frequency = Counter(words)
-            keywords = [word for word in words if word.lower() not in stop_list]
+            sans_punctuation   = re.compile(".*[A-Za-z].*")
+            structured_text    = BeautifulSoup(response.text, "html.parser").get_text()
+            unstructured_text  = nltk.word_tokenize(structured_text)
+            restructured_text  = nltk.Text(unstructured_text)
+            words              = [word for word in restructured_text if sans_punctuation.match(word)]
+            words_frequency    = Counter(words)
+            keywords           = [word for word in words if word.lower() not in stop_list]
             keywords_frequency = Counter(keywords)
             results = sorted(
                 keywords_frequency.items(),
-                key = operator.itemgetter(1),
+                key     = operator.itemgetter(1),
                 reverse = True
             )
             with open('payload.pkl', "wb") as f:
