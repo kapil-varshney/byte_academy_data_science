@@ -29,6 +29,8 @@ for week in range(default_weeks_in_track):
             os.system('mkdir week_0{0}/day_{1}/drills/warmups'.format(week, day))
             os.system('mkdir week_0{0}/day_{1}/drills/walkthroughs'.format(week, day))
             os.system('mkdir week_0{0}/day_{1}/exercises'.format(week, day))
+            os.system('mkdir week_0{0}/day_{1}/exercises/.hints'.format(week, day))
+            os.system('mkdir week_0{0}/day_{1}/exercises/.answers'.format(week, day))
 
             os.system('touch week_0{0}/day_{1}/README.md'.format(week, day))
             os.system('touch week_0{0}/day_{1}/assignments/README.md'.format(week, day))
@@ -72,6 +74,8 @@ for week in range(default_weeks_in_track):
             os.system('mkdir week_{0}/day_{1}/drills/warmups'.format(week, day))
             os.system('mkdir week_{0}/day_{1}/drills/walkthroughs'.format(week, day))
             os.system('mkdir week_{0}/day_{1}/exercises'.format(week, day))
+            os.system('mkdir week_{0}/day_{1}/exercises/.hints'.format(week, day))
+            os.system('mkdir week_{0}/day_{1}/exercises/.answers'.format(week, day))
 
             os.system('touch week_{0}/day_{1}/README.md'.format(week, day))
             os.system('touch week_{0}/day_{1}/assignments/README.md'.format(week, day))
