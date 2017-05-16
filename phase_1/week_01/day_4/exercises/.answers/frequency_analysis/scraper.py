@@ -66,5 +66,5 @@ def seek():
 
 if __name__ == '__main__':
     microframework.run(host='127.0.0.1', port=5000, debug=True)
-    # with open('payload.pkl', "rb") as f:
-    #     print(pickle.load(f))
+#    with open('payload.pkl', "rb") as f:
+#        print(pickle.load(f))
