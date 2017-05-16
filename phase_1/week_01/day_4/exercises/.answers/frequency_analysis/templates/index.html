@@ -31,10 +31,10 @@
                     <br>
                 </div>
                 <div class="col-sm-5 col-sm-offset-1">
-                    {% if results %}
+                    {% if pairs %}
                         <h2>Frequencies</h2>
                         <br>
-                        <div id="results">
+                        <div id="pairs">
                             <table class="table table-striped" style="max-width: 300px;">
                                 <thead>
                                     <tr>
@@ -42,7 +42,7 @@
                                         <th>Count</th>
                                     </tr>
                                 </thead>
-                                {% for result in results %}
+                                {% for result in pairs %}
                                     <tr>
                                         <td>{{ result[0] }}</td>
                                         <td>{{ result[1] }}</td>
