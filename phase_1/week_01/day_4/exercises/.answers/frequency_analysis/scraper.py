@@ -25,7 +25,7 @@ def index():
 @microframework.route('/seek', methods=["GET", "POST"])
 def seek():
     errors  = []
-    results = {}
+    pairs = {}
     if request.method == "POST":
         try:
             url = request.form["url"]
@@ -47,25 +47,24 @@ def seek():
             unstructured_text  = nltk.word_tokenize(structured_text)
             restructured_text  = nltk.Text(unstructured_text)
             words              = [word for word in restructured_text if sans_punctuation.match(word)]
-            words_frequency    = Counter(words)
+            word_frequency     = Counter(words)
             keywords           = [word for word in words if word.lower() not in stop_list]
-            keywords_frequency = Counter(keywords)
-            results = sorted(
-                keywords_frequency.items(),
+            keyword_frequency  = Counter(keywords)
+            pairs = sorted(
+                keyword_frequency.items(),
                 key     = operator.itemgetter(1),
                 reverse = True
             )
             with open('payload.pkl', "wb") as f:
-               pickle.dump(keywords_frequency, f)
-
-            with open('payload.pkl', "rb") as f:
-               print(pickle.load(f))
+               pickle.dump(keyword_frequency, f)
         return render_template(
             'index.html',
             errors=errors,
-            results=results
+            pairs=pairs
         )
 
 
 if __name__ == '__main__':
     microframework.run(host='127.0.0.1', port=5000, debug=True)
+    # with open('payload.pkl', "rb") as f:
+    #     print(pickle.load(f))
