@@ -2,7 +2,6 @@
 
 "Flip the classroom."
 
-"Water the lawn"
 ---
 
 ### Phase 1
@@ -25,3 +24,6 @@
 - Week 10:
 - Week 11:
 - Week 12:
+
+###### Notes:
+- Remind students to "water the lawn."
