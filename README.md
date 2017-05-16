@@ -2,6 +2,7 @@
 
 "Flip the classroom."
 
+"Water the lawn"
 ---
 
 ### Phase 1
